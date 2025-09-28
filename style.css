@@ -1,0 +1,19 @@
+body {
+    margin: 0;
+    --cMain: #44803F;
+    --cBackground: hsl(from var(--cMain) h s calc(l * 2))
+}
+
+header {
+    display: flex;
+    position: sticky;
+    top: 0;
+    height: 80px;
+    width: 100%;
+    background-color: var(--cBackground);
+    justify-content: center;
+}
+
+#main {
+    padding: 2em 4em;
+}
