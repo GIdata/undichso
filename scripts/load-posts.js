@@ -1,7 +1,7 @@
 
 async function load_posts() {
 
-    const posts = await fetch("posts/_posts-index.json").then(response => response.json());
+    const posts = await fetch("posts-index.json").then(response => response.json());
     console.log("posts", posts)
 
     const postContainer = document.getElementById("main");
