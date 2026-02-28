@@ -1,24 +1,71 @@
-body {
-    margin: 0;
-    --cMain: #44803F;
-    --cBackground: hsl(from var(--cMain) h s calc(l * 2));
-    font-family: Helvetica, sans-serif;
+:root {
+    --bg: #f6f7fb;
+    --card: #ffffff;
+    --muted: #6b7280;
 }
 
-header {
-    display: flex;
-    position: sticky;
-    top: 0;
-    height: 80px;
-    width: 100%;
-    background-color: var(--cBackground);
-    justify-content: center;
+@font-face {
+    font-family: unseen;
+    src: url(static/the-unseen.ttf);
+    font-weight: 600;
+}
+
+body {
+    margin: 0;
+    font-family: Helvetica, sans-serif;
+    background: var(--bg);
+    color: #111827;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.site-header {
+    background: linear-gradient(135deg, rgba(245, 59, 22, 0.2), rgba(51, 232, 161, 0.2));
+    padding: 2.25rem 1rem 1.25rem;
+    text-align: center;
+}
+
+.site-header>h1 {
+    margin: 0;
+    font-size: 3rem;
+    color: #111827;
+    font-family: unseen, Helvetica, sans-serif;
+}
+
+.site-header>p {
+    margin: 0.25rem 0 0;
+    color: var(--muted);
+    font-weight: 300
 }
 
 #main {
-    padding: 2em 4em;
+    max-width: 1020px;
+    margin: 2rem auto;
 }
 
-.follow-me{
-    position: absolute;
+.post {
+    background: var(--card);
+    border-radius: 6px;
+    padding: 1.25rem 1.25rem;
+    margin-bottom: 1rem;
+    box-shadow: 1px 3px 5px rgba(15, 23, 42, 0.06);
+}
+
+.post>h2 {
+    margin: 0 0 0.25rem;
+    font-size: 1.125rem
+}
+
+.post>time {
+    display: block;
+    color: var(--muted);
+    font-size: 0.65rem;
+    margin-bottom: 0.5rem
+}
+
+.site-footer {
+    text-align: center;
+    color: var(--muted);
+    padding: 2rem 1rem;
+    font-size: 0.9rem
 }
